@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="colorPrimary">#7B32C9</color>
+    <color name="colorPrimaryDark">#491E65</color>
+    <color name="colorAccent">#b829a7</color>
+
     <color name="purple_200">#FFBB86FC</color>
     <color name="purple_500">#FF6200EE</color>
     <color name="purple_700">#FF3700B3</color>
@@ -9,4 +13,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="green">#8bc34a</color>
     <color name="light_green">#ccff90</color>
+    <color name="green_blue">#44AA89</color>
 </resources>

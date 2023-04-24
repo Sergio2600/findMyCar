@@ -1,5 +1,12 @@
 <resources>
     <string name="app_name">findMyCar</string>
+    <string name="usuario_nuevo">Usuario nuevo</string>
+    <string name="pass">Contraseña</string>
+    <string name="boton_registrar">Registrar</string>
+    <string name="iniciar_sesion">Inicia sesión</string>
+    <string name="crear_cuenta">crea tu cuenta</string>
+
+
     <string name="title_activity_login">LoginActivity</string>
     <string name="prompt_email">Email</string>
     <string name="prompt_password">Password</string>
