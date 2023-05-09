@@ -27,7 +27,6 @@ public class QActivity extends AppCompatActivity {
 
 
         preguntas = getResources().getStringArray(R.array.preguntas);
-//TODO cambiar =0 por que cambie cada pregunta que se responda.
         preguntaActual = 0;
 
 //Mete los strings en la activity
@@ -35,6 +34,7 @@ public class QActivity extends AppCompatActivity {
 
 
 //Controles de los botones
+//TODO Que vaya enviando los datos a algún lado y que al acabar pase a la pestaña de resultados
         Button btn1,btn2,btn3,btn4;
 
         btn1 = (Button) findViewById(R.id.respuesta1);
