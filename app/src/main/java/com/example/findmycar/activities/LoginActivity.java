@@ -38,8 +38,12 @@ public class LoginActivity extends AppCompatActivity {
         if(usuario.getText().toString().length()==0 || pass.getText().toString().length()==0){
             Toast toast = Toast.makeText(this,"hay algun campo vacio",Toast.LENGTH_LONG);
             toast.show();
-        }else {//comparamos el contenido de las cajas
+        }else {
 
+            //FALTA comprobar que los datos del login son corrector
+            //Por ahora solo con meter dos datos da paso al questionario
+            Intent intent = new Intent(LoginActivity.this,QActivity.class);
+            startActivity(intent);
         }
 
 
