@@ -12,6 +12,11 @@
         android:theme="@style/Theme.FindMyCar"
         tools:targetApi="31">
         <activity
+            android:name=".FinalActivity"
+            android:exported="false"
+            android:label="@string/title_activity_final"
+            android:theme="@style/Theme.FindMyCar.NoActionBar" />
+        <activity
             android:name=".Register"
             android:exported="false">
             <meta-data

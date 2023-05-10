@@ -3,6 +3,7 @@ package com.example.findmycar.activities;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -26,7 +27,12 @@ public class QActivity extends AppCompatActivity {
         setContentView(R.layout.activity_qactivity);
 
 
+
+        Intent finalIntent = new Intent(QActivity.this, FinalActivity.class);
+
+
         preguntas = getResources().getStringArray(R.array.preguntas);
+//TODO cambiar =0 por que cambie cada pregunta que se responda.
         preguntaActual = 0;
 
 //Mete los strings en la activity
@@ -34,6 +40,7 @@ public class QActivity extends AppCompatActivity {
 
 
 //Controles de los botones
+
 //TODO Que vaya enviando los datos a algún lado y que al acabar pase a la pestaña de resultados
 
         Button btn1,btn2,btn3,btn4;
@@ -49,6 +56,8 @@ public class QActivity extends AppCompatActivity {
                 if(preguntaActual < preguntas.length -1) {
                     preguntaActual++;
                     enseñarPreguntas();
+                } else {
+                    startActivity(finalIntent);
                 }
             }
         });
