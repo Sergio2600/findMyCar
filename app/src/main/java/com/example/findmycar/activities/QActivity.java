@@ -35,6 +35,7 @@ public class QActivity extends AppCompatActivity {
 
 //Controles de los botones
 //TODO Que vaya enviando los datos a algún lado y que al acabar pase a la pestaña de resultados
+
         Button btn1,btn2,btn3,btn4;
 
         btn1 = (Button) findViewById(R.id.respuesta1);
@@ -45,29 +46,37 @@ public class QActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+                if(preguntaActual < preguntas.length -1) {
+                    preguntaActual++;
+                    enseñarPreguntas();
+                }
             }
         });
         btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+                if(preguntaActual < preguntas.length -1) {
+                    preguntaActual++;
+                    enseñarPreguntas();
+                }
             }
         });
         btn3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+                if(preguntaActual < preguntas.length -1) {
+                    preguntaActual++;
+                    enseñarPreguntas();
+                }
             }
         });
         btn4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+                if(preguntaActual < preguntas.length -1) {
+                    preguntaActual++;
+                    enseñarPreguntas();
+                }
             }
         });
 
@@ -93,6 +102,10 @@ public class QActivity extends AppCompatActivity {
         for (int i = 0; i < id_respuestas.length; i++){
             Button respuesta = (Button) findViewById(id_respuestas[i]);
             respuesta.setText(partes[i+1]);
+        }
+
+        if(preguntaActual == preguntas.length-1){
+            //Toast.makeText(QActivity.this, "es la ultima pregunta", Toast.LENGTH_LONG).show();
         }
     }
 }
