@@ -18,6 +18,7 @@ public class QActivity extends AppCompatActivity {
     };
     private int preguntaActual;
     private String[] preguntas;
+    private  Button btn1,btn2,btn3,btn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -31,11 +32,7 @@ public class QActivity extends AppCompatActivity {
 //Mete los strings en la activity
         ensenarPreguntas();
 
-
 //Controles de los botones
-//TODO Que vaya enviando los datos a algún lado y que al acabar pase a la pestaña de resultados
-        Button btn1,btn2,btn3,btn4;
-
         btn1 = (Button) findViewById(R.id.respuesta1);
         btn2 = (Button) findViewById(R.id.respuesta2);
         btn3 = (Button) findViewById(R.id.respuesta3);
@@ -44,10 +41,11 @@ public class QActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                ensenarPreguntas();
 //TODO la idea es que esto haga que al llegar a la última pregunta pase a la activity "Resultados" pero no va....
-                if(preguntaActual == preguntas.length+1) {
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
                     Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
                     startActivity(intent);
                 }
@@ -56,22 +54,37 @@ public class QActivity extends AppCompatActivity {
         btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                ensenarPreguntas();
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         btn3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                ensenarPreguntas();
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         btn4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                ensenarPreguntas();
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
