@@ -23,21 +23,21 @@
         android:layout_height="75dp"
         android:layout_below="@+id/logoApp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="@font/mifuente"
         android:text="Cargando"
         android:textAlignment="center"
         android:textColor="@color/black"
-        android:textSize="50dp"
+        android:textSize="35dp"
         tools:ignore="MissingConstraints"
         tools:layout_editor_absoluteX="71dp"
         tools:layout_editor_absoluteY="438dp" />
 
     <ImageView
         android:id="@+id/minivan"
-        android:layout_width="138dp"
-        android:layout_height="107dp"
-        android:layout_marginTop="490dp"
+        android:layout_width="98dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="470dp"
         app:srcCompat="@mipmap/minivan"
         tools:ignore="MissingConstraints"
 

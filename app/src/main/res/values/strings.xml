@@ -19,6 +19,18 @@
     <string name="login_failed">"Login failed"</string>
     <string name="email">Email</string>
     <string name="contrase_a">Contraseña</string>
+    <string name="pregunta_1">¿Pregunta 1?</string>
 
+
+
+    <!--PREGUNTAS-->
+
+    <array name="preguntas">
+        <item>¿Qué tipo de carrocería estas buscando?;Berlina;Familiar;Cabrio;4x4</item>
+        <item>Elige rango de precio;10.000€-15.000€;15.000€-25.000€;25.000€-40.000€;+40.000€</item>
+        <item>Escoge un tipo de combustible/motorización;Gasolina;Diesel;Híbrido;Eléctrico</item>
+        <item>Eligen un rango de potencia;Menos de 100cv;100cv-150cv;150cv-200cv;Más de 200cv</item>
+        <item>¿Cuántas plazas necesitas?;2;5;7;Más de 7</item>
+    </array>
 
 </resources>

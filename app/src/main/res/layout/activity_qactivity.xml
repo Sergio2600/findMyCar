@@ -10,40 +10,67 @@
         android:id="@+id/Quest"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="¿Pregunta 1?"
-        tools:layout_editor_absoluteX="173dp"
-        tools:layout_editor_absoluteY="155dp" />
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="30dp"
+        android:text="@string/pregunta_1"
+        android:textSize="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/respuesta1"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/green_blue"
         android:text="respuesta1"
-        tools:layout_editor_absoluteX="140dp"
-        tools:layout_editor_absoluteY="280dp" />
-
-    <Button
-        android:id="@+id/respuesta3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="respuesta3"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="432dp" />
-
-    <Button
-        android:id="@+id/respuesta4"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="respuesta4"
-        tools:layout_editor_absoluteX="143dp"
-        tools:layout_editor_absoluteY="504dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Quest" />
 
     <Button
         android:id="@+id/respuesta2"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/green_blue"
         android:text="respuesta2"
-        tools:layout_editor_absoluteX="142dp"
-        tools:layout_editor_absoluteY="358dp" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respuesta1" />
+
+    <Button
+        android:id="@+id/respuesta3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/green_blue"
+        android:text="respuesta3"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respuesta2" />
+
+    <Button
+        android:id="@+id/respuesta4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="40dp"
+        android:backgroundTint="@color/green_blue"
+        android:text="respuesta4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/respuesta3" />
+
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
