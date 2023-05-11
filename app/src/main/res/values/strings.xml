@@ -6,6 +6,8 @@
     <string name="boton_registrar">Registrar</string>
     <string name="iniciar_sesion">Inicia sesión</string>
     <string name="crear_cuenta">crea tu cuenta</string>
+    <string name="large_text">Texto grande</string>
+
 
 
     <string name="title_activity_login">LoginActivity</string>
@@ -22,7 +24,6 @@
     <string name="pregunta_1">¿Pregunta 1?</string>
 
 
-
     <!--PREGUNTAS-->
 
     <array name="preguntas">
@@ -31,6 +32,7 @@
         <item>Escoge un tipo de combustible/motorización;Gasolina;Diesel;Híbrido;Eléctrico</item>
         <item>Eligen un rango de potencia;Menos de 100cv;100cv-150cv;150cv-200cv;Más de 200cv</item>
         <item>¿Cuántas plazas necesitas?;2;5;7;Más de 7</item>
+        <item>Otra pregunta;La;ultima;pregunta;(Por ahora)</item>
     </array>
 
 </resources>

@@ -2,12 +2,11 @@ package com.example.findmycar.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.DialogInterface;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.findmycar.R;
 
@@ -19,6 +18,7 @@ public class QActivity extends AppCompatActivity {
     };
     private int preguntaActual;
     private String[] preguntas;
+    private  Button btn1,btn2,btn3,btn4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,13 +30,9 @@ public class QActivity extends AppCompatActivity {
         preguntaActual = 0;
 
 //Mete los strings en la activity
-        enseñarPreguntas();
-
+        ensenarPreguntas();
 
 //Controles de los botones
-//TODO Que vaya enviando los datos a algún lado y que al acabar pase a la pestaña de resultados
-        Button btn1,btn2,btn3,btn4;
-
         btn1 = (Button) findViewById(R.id.respuesta1);
         btn2 = (Button) findViewById(R.id.respuesta2);
         btn3 = (Button) findViewById(R.id.respuesta3);
@@ -45,29 +41,50 @@ public class QActivity extends AppCompatActivity {
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+//TODO la idea es que esto haga que al llegar a la última pregunta pase a la activity "Resultados" pero no va....
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         btn2.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         btn3.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    startActivity(intent);
+                }
             }
         });
         btn4.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-                preguntaActual++;
-                enseñarPreguntas();
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    startActivity(intent);
+                }
             }
         });
 
@@ -81,7 +98,7 @@ public class QActivity extends AppCompatActivity {
 
 
 
-    private void enseñarPreguntas() {
+    private void ensenarPreguntas() {
 //Partir el strign en trozos
         String p0 = preguntas[preguntaActual];
         String[] partes = p0.split(";");
