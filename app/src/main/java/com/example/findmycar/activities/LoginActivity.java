@@ -10,10 +10,11 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.example.findmycar.R;
+import com.example.findmycar.activities.db.MyDatabaseHelper;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class LoginActivity extends AppCompatActivity {
-
+    MyDatabaseHelper controladorDB = new MyDatabaseHelper(this);
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,9 +40,14 @@ public class LoginActivity extends AppCompatActivity {
             Toast toast = Toast.makeText(this,"hay algun campo vacio",Toast.LENGTH_LONG);
             toast.show();
         }else {//comparamos el contenido de las cajas
-
+           if(controladorDB.existeUsuario(usuario.getText().toString())){
+               Toast toast = Toast.makeText(this,"el usuario existe",Toast.LENGTH_LONG);
+               toast.show();
+           }
+           else{
+               Toast toast = Toast.makeText(this,"el usuario no existe",Toast.LENGTH_LONG);
+               toast.show();
+           }
         }
-
-
     }
 }

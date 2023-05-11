@@ -2,19 +2,17 @@ package com.example.findmycar.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.Toast;
 
 import com.example.findmycar.R;
-import com.example.findmycar.activities.db.ControladorDB;
+import com.example.findmycar.activities.db.MyDatabaseHelper;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class Register extends AppCompatActivity {
     //objeto controladorDB
-    ControladorDB controladorDB = new ControladorDB(this);
+    MyDatabaseHelper controladorDB = new MyDatabaseHelper(this);
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

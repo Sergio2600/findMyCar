@@ -5,32 +5,57 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.widget.Toast;
 
-import androidx.annotation.Nullable;
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
 
-public class ControladorDB extends SQLiteOpenHelper {
+public class MyDatabaseHelper extends SQLiteOpenHelper {
+    private static final String DATABASE_NAME = "coches.db";
+    private static final int DATABASE_VERSION = 1;
+    private Context context;
 
-    public ControladorDB(@Nullable Context context) {
-        super(context, "com.example.findmycar.activities.db", null, 1);
+    public MyDatabaseHelper(Context context) {
+        super(context, DATABASE_NAME, null, DATABASE_VERSION);
+        this.context = context;
     }
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        db.execSQL("CREATE TABLE USUARIOS (ID INTEGER PRIMARY KEY AUTOINCREMENT, USUARIO TEXT NOT NULL, PASSWORD TEXT NOT NULL);");
+        executeSqlFromFile(db, "coches.db");
     }
 
     @Override
-    public void onUpgrade(SQLiteDatabase sqLiteDatabase, int i, int i1) {
-
+    public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+        db.execSQL("DROP TABLE IF EXISTS usuarios");
+        onCreate(db);
     }
 
+    private void executeSqlFromFile(SQLiteDatabase db, String fileName) {
+        try {
+            InputStream inputStream = context.getAssets().open(fileName);
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(inputStream));
+            String line;
+            StringBuilder stringBuilder = new StringBuilder();
+            while ((line = bufferedReader.readLine()) != null) {
+                stringBuilder.append(line);
+                if (line.endsWith(";")) {
+                    db.execSQL(stringBuilder.toString());
+                    stringBuilder = new StringBuilder();
+                }
+            }
+            bufferedReader.close();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+    }
 
     // comprobamos usuario y contraseña en bbdd
     public boolean comprobarContraseña(String usuario, String contraseña){
 
         // abrimos base de datos
-        SQLiteDatabase db = this.getReadableDatabase();
+        SQLiteDatabase db = getReadableDatabase();
 
         Cursor cursor = db.rawQuery("Select * FROM  USUARIOS  WHERE  USUARIO  = ? AND password  = ?",new String[]{usuario,contraseña});
         int regs = cursor.getCount();
@@ -88,4 +113,3 @@ public class ControladorDB extends SQLiteOpenHelper {
         db.close();
     }
 }
-
