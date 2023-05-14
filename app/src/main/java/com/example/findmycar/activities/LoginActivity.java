@@ -41,8 +41,14 @@ public class LoginActivity extends AppCompatActivity {
             toast.show();
         }else {//comparamos el contenido de las cajas
            if(controladorDB.existeUsuario(usuario.getText().toString())){
-               Toast toast = Toast.makeText(this,"el usuario existe",Toast.LENGTH_LONG);
-               toast.show();
+               if(controladorDB.comprobarContraseña(usuario.getText().toString(),pass.getText().toString())){
+                   Intent intent = new Intent(LoginActivity.this,QActivity.class);
+                   startActivity(intent);
+               }
+               else{
+                   Toast toast = Toast.makeText(this,"contraseña incorrecta ",Toast.LENGTH_LONG);
+                   toast.show();
+               }
            }
            else{
                Toast toast = Toast.makeText(this,"el usuario no existe",Toast.LENGTH_LONG);
