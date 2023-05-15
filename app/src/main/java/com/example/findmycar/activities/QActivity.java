@@ -19,7 +19,7 @@ public class QActivity extends AppCompatActivity {
     private int preguntaActual;
     private String p0;
     private String[] preguntas, partes;
-    private  Button btn1,btn2,btn3,btn4;
+    private  Button btn1,btn2,btn3,btn4, btn5, btn6;
     private String valorPrecio, tipoCarroceria, tipoCombustible, valorPotencia, numeroPlazas, valorMaletero, nada;
 
     @Override
@@ -39,6 +39,8 @@ public class QActivity extends AppCompatActivity {
         btn2 = (Button) findViewById(R.id.respuesta2);
         btn3 = (Button) findViewById(R.id.respuesta3);
         btn4 = (Button) findViewById(R.id.respuesta4);
+        btn5 = (Button) findViewById(R.id.respuesta5);
+        btn6 = (Button) findViewById(R.id.respuesta6);
 
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
@@ -48,6 +50,7 @@ public class QActivity extends AppCompatActivity {
 //--> para luego en el intent pasar la información a la siguiente activity.
 //Me preocupa que pueda acceder a "partes[]" porque se hace en un método abajo, pero por eso lo he creado ahí arriba  con un private.....
 //HABRIA QUE CONVERTIR LOS NUMEROS A INT???
+
                 switch (preguntaActual) {
                     case 0:
                         valorPrecio = partes[1];
@@ -209,6 +212,91 @@ public class QActivity extends AppCompatActivity {
                     startActivity(intent);
                 }
             }
+
+        });
+        btn5.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                switch (preguntaActual) {
+                    case 0:
+                        valorPrecio = partes[5];
+                        break;
+                    case 1:
+                        tipoCarroceria = partes[5];
+                        break;
+                    case 2:
+                        tipoCombustible = partes[5];
+                        break;
+                    case 3:
+                        valorPotencia = partes[5];
+                        break;
+                    case 4:
+                        numeroPlazas = partes[5];
+                        break;
+                    case 5:
+                        valorMaletero = partes[5];
+                        break;
+                    case 6:
+                        nada = partes[5];
+                        break;
+                }
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    intent.putExtra("precio", valorPrecio);
+                    intent.putExtra("carroceria", tipoCarroceria);
+                    intent.putExtra("combustible", tipoCombustible);
+                    intent.putExtra("potencia", valorPotencia);
+                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("maletero", valorMaletero);
+                    startActivity(intent);
+                }
+            }
+
+        });
+        btn6.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                switch (preguntaActual) {
+                    case 0:
+                        valorPrecio = partes[6];
+                        break;
+                    case 1:
+                        tipoCarroceria = partes[6];
+                        break;
+                    case 2:
+                        tipoCombustible = partes[6];
+                        break;
+                    case 3:
+                        valorPotencia = partes[6];
+                        break;
+                    case 4:
+                        numeroPlazas = partes[6];
+                        break;
+                    case 5:
+                        valorMaletero = partes[6];
+                        break;
+                    case 6:
+                        nada = partes[6];
+                        break;
+                }
+                if(preguntaActual+1 < preguntas.length) {
+                    preguntaActual++;
+                    ensenarPreguntas();
+                }else {
+                    Intent intent = new Intent(QActivity.this, ResultadosActivity.class);
+                    intent.putExtra("precio", valorPrecio);
+                    intent.putExtra("carroceria", tipoCarroceria);
+                    intent.putExtra("combustible", tipoCombustible);
+                    intent.putExtra("potencia", valorPotencia);
+                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("maletero", valorMaletero);
+                    startActivity(intent);
+                }
+            }
+
         });
 
 
@@ -220,6 +308,31 @@ public class QActivity extends AppCompatActivity {
 //Partir el strign en trozos
         p0 = preguntas[preguntaActual];
         partes = p0.split(";");
+//Ocultar las preguntas no utilizadas
+        switch (partes.length){
+            case 3: //2 respuestas
+                btn3.setVisibility(View.GONE);
+                btn4.setVisibility(View.GONE);
+                btn5.setVisibility(View.GONE);
+                btn6.setVisibility(View.GONE);
+                break;
+            case 4: //3 respuestas
+                btn4.setVisibility(View.GONE);
+                btn5.setVisibility(View.GONE);
+                btn6.setVisibility(View.GONE);
+                break;
+            case 5: //4 respuestas
+                btn5.setVisibility(View.GONE);
+                btn6.setVisibility(View.GONE);
+                break;
+            case 6: //5 respuestas
+                btn6.setVisibility(View.GONE);
+                break;
+            case 7: //6 respuestas
+                break;
+
+        }
+
 //el partes 0 siempre será la pregunta
         TextView Quest = (TextView) findViewById(R.id.Quest);
         Quest.setText(partes[0]);
