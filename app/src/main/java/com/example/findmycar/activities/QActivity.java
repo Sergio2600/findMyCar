@@ -323,8 +323,8 @@ public class QActivity extends AppCompatActivity {
                 btn6.setVisibility(View.GONE);
                 break;
             case 5: //4 respuestas
-                btn5.setVisibility(View.GONE);
-                btn6.setVisibility(View.GONE);
+                //btn5.setVisibility(View.GONE);
+                //btn6.setVisibility(View.GONE);
                 break;
             case 6: //5 respuestas
                 btn6.setVisibility(View.GONE);
