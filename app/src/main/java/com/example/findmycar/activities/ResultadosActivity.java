@@ -9,21 +9,19 @@ import com.example.findmycar.R;
 
 public class ResultadosActivity extends AppCompatActivity {
 
-    Intent intent = getIntent();
-    private String valorPrecio = intent.getStringExtra("precio");
-    private String tipoCarroceria = intent.getStringExtra("carroceria");
-    private String tipoCombustible = intent.getStringExtra("combustible");
-    private String valorPotencia = intent.getStringExtra("potencia");
-    private String numeroPlazas = intent.getStringExtra("plazas");
-    private String valorMaletero = intent.getStringExtra("maletero");
+    private String valorPrecio, tipoCarroceria, tipoCombustible, valorPotencia, tipoDistintivo, valorMaletero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados);
 
-
-
-
+        Intent intent = getIntent();
+        valorPrecio = intent.getStringExtra("precio");
+        tipoCarroceria = intent.getStringExtra("carroceria");
+        tipoCombustible = intent.getStringExtra("combustible");
+        valorPotencia = intent.getStringExtra("potencia");
+        tipoDistintivo = intent.getStringExtra("distintivo");
+        valorMaletero = intent.getStringExtra("maletero");
     }
 }

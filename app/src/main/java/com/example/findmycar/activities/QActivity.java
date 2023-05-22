@@ -7,6 +7,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.findmycar.R;
 
@@ -14,13 +15,13 @@ public class QActivity extends AppCompatActivity {
 
     private int id_respuestas[] = {
             R.id.respuesta1, R.id.respuesta2, R.id.respuesta3,
-            R.id.respuesta4
+            R.id.respuesta4, R.id.respuesta5, R.id.respuesta6
     };
     private int preguntaActual;
     private String p0;
     private String[] preguntas, partes;
     private  Button btn1,btn2,btn3,btn4, btn5, btn6;
-    private String valorPrecio, tipoCarroceria, tipoCombustible, valorPotencia, numeroPlazas, valorMaletero, nada;
+    private String valorPrecio, tipoCarroceria, tipoCombustible, valorPotencia, tipoDistintivo, valorMaletero;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -66,13 +67,10 @@ public class QActivity extends AppCompatActivity {
                         valorPotencia = partes[1];
                         break;
                     case 4:
-                        numeroPlazas = partes[1];
+                        tipoDistintivo = partes[1];
                         break;
                     case 5:
                         valorMaletero = partes[1];
-                        break;
-                    case 6:
-                        nada = partes[4];
                         break;
                 }
                 if(preguntaActual+1 < preguntas.length) {
@@ -84,7 +82,7 @@ public class QActivity extends AppCompatActivity {
                     intent.putExtra("carroceria", tipoCarroceria);
                     intent.putExtra("combustible", tipoCombustible);
                     intent.putExtra("potencia", valorPotencia);
-                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("distintivo", tipoDistintivo);
                     intent.putExtra("maletero", valorMaletero);
                     startActivity(intent);
                 }
@@ -107,13 +105,10 @@ public class QActivity extends AppCompatActivity {
                         valorPotencia = partes[2];
                         break;
                     case 4:
-                        numeroPlazas = partes[2];
+                        tipoDistintivo = partes[2];
                         break;
                     case 5:
                         valorMaletero = partes[2];
-                        break;
-                    case 6:
-                        nada = partes[4];
                         break;
                 }
                 if(preguntaActual+1 < preguntas.length) {
@@ -125,7 +120,7 @@ public class QActivity extends AppCompatActivity {
                     intent.putExtra("carroceria", tipoCarroceria);
                     intent.putExtra("combustible", tipoCombustible);
                     intent.putExtra("potencia", valorPotencia);
-                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("distintivo", tipoDistintivo);
                     intent.putExtra("maletero", valorMaletero);
                     startActivity(intent);
                 }
@@ -149,13 +144,10 @@ public class QActivity extends AppCompatActivity {
                         valorPotencia = partes[3];
                         break;
                     case 4:
-                        numeroPlazas = partes[3];
+                        tipoDistintivo = partes[3];
                         break;
                     case 5:
                         valorMaletero = partes[3];
-                        break;
-                    case 6:
-                        nada = partes[4];
                         break;
                 }
                 if(preguntaActual+1 < preguntas.length) {
@@ -167,7 +159,7 @@ public class QActivity extends AppCompatActivity {
                     intent.putExtra("carroceria", tipoCarroceria);
                     intent.putExtra("combustible", tipoCombustible);
                     intent.putExtra("potencia", valorPotencia);
-                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("distintivo", tipoDistintivo);
                     intent.putExtra("maletero", valorMaletero);
                     startActivity(intent);
                 }
@@ -190,13 +182,10 @@ public class QActivity extends AppCompatActivity {
                         valorPotencia = partes[4];
                         break;
                     case 4:
-                        numeroPlazas = partes[4];
+                        tipoDistintivo = partes[4];
                         break;
                     case 5:
                         valorMaletero = partes[4];
-                        break;
-                    case 6:
-                        nada = partes[4];
                         break;
                 }
                 if(preguntaActual+1 < preguntas.length) {
@@ -208,7 +197,7 @@ public class QActivity extends AppCompatActivity {
                     intent.putExtra("carroceria", tipoCarroceria);
                     intent.putExtra("combustible", tipoCombustible);
                     intent.putExtra("potencia", valorPotencia);
-                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("distintivo", tipoDistintivo);
                     intent.putExtra("maletero", valorMaletero);
                     startActivity(intent);
                 }
@@ -232,13 +221,10 @@ public class QActivity extends AppCompatActivity {
                         valorPotencia = partes[5];
                         break;
                     case 4:
-                        numeroPlazas = partes[5];
+                        tipoDistintivo = partes[5];
                         break;
                     case 5:
                         valorMaletero = partes[5];
-                        break;
-                    case 6:
-                        nada = partes[5];
                         break;
                 }
                 if(preguntaActual+1 < preguntas.length) {
@@ -250,7 +236,7 @@ public class QActivity extends AppCompatActivity {
                     intent.putExtra("carroceria", tipoCarroceria);
                     intent.putExtra("combustible", tipoCombustible);
                     intent.putExtra("potencia", valorPotencia);
-                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("distintivo", tipoDistintivo);
                     intent.putExtra("maletero", valorMaletero);
                     startActivity(intent);
                 }
@@ -274,13 +260,10 @@ public class QActivity extends AppCompatActivity {
                         valorPotencia = partes[6];
                         break;
                     case 4:
-                        numeroPlazas = partes[6];
+                        tipoDistintivo = partes[6];
                         break;
                     case 5:
                         valorMaletero = partes[6];
-                        break;
-                    case 6:
-                        nada = partes[6];
                         break;
                 }
                 if(preguntaActual+1 < preguntas.length) {
@@ -292,7 +275,7 @@ public class QActivity extends AppCompatActivity {
                     intent.putExtra("carroceria", tipoCarroceria);
                     intent.putExtra("combustible", tipoCombustible);
                     intent.putExtra("potencia", valorPotencia);
-                    intent.putExtra("plazas", numeroPlazas);
+                    intent.putExtra("distintivo", tipoDistintivo);
                     intent.putExtra("maletero", valorMaletero);
                     startActivity(intent);
                 }
@@ -309,37 +292,40 @@ public class QActivity extends AppCompatActivity {
 //Partir el strign en trozos
         p0 = preguntas[preguntaActual];
         partes = p0.split(";");
-//Ocultar las preguntas no utilizadas
-        switch (partes.length){
-            case 3: //2 respuestas
+
+// Ocultar las preguntas no utilizadas
+        int numRespuestas = partes.length - 1;
+
+        switch (numRespuestas) {
+            case 2: // 2 respuestas
                 btn3.setVisibility(View.GONE);
                 btn4.setVisibility(View.GONE);
                 btn5.setVisibility(View.GONE);
                 btn6.setVisibility(View.GONE);
                 break;
-            case 4: //3 respuestas
+            case 3: // 3 respuestas
                 btn4.setVisibility(View.GONE);
                 btn5.setVisibility(View.GONE);
                 btn6.setVisibility(View.GONE);
                 break;
-            case 5: //4 respuestas
+            case 4: // 4 respuestas
                 btn5.setVisibility(View.GONE);
                 btn6.setVisibility(View.GONE);
                 break;
-            case 6: //5 respuestas
+            case 5: // 5 respuestas
                 btn6.setVisibility(View.GONE);
                 break;
-            case 7: //6 respuestas
+            case 6: // 6 respuestas
+                // No es necesario ocultar ningún botón
                 break;
-
         }
 
-//el partes 0 siempre será la pregunta
+//el partes[0] siempre será la pregunta
         TextView Quest = (TextView) findViewById(R.id.Quest);
         Quest.setText(partes[0]);
 
-//Recorre el array metiendo las preguntas
-        for (int i = 0; i < id_respuestas.length; i++){
+//Recorre el array metiendo las respuestas
+        for (int i = 0; i < numRespuestas; i++){
             Button respuesta = (Button) findViewById(id_respuestas[i]);
             respuesta.setText(partes[i+1]);
         }
