@@ -114,6 +114,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     }
 
     public void buscar(){
+        //
         String sql = "SELECT * FROM COCHES WHERE (PRECIO >= 20000 AND PRECIO <= 40000) AND ";
         sql = sql + "(TIPO_CARROCERIA = '1') AND (COMBUSTIBLE = '1') AND (POTENCIA >= 180 AND POTENCIA <= 300) ";
         sql = sql + "AND (CAPACIDAD_MALETERO >= 240) order by precio";
