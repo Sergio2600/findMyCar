@@ -308,16 +308,13 @@ public class QActivity extends AppCompatActivity {
                 btn5.setVisibility(View.GONE);
                 btn6.setVisibility(View.GONE);
                 break;
-            case 5: //4 respuestas
-                //btn5.setVisibility(View.GONE);
-                //btn6.setVisibility(View.GONE);
             case 4: // 4 respuestas
                 btn5.setVisibility(View.GONE);
                 btn6.setVisibility(View.GONE);
                 break;
-           // case 5: // 5 respuestas
-              //  btn6.setVisibility(View.GONE);
-               // break;
+            case 5: // 5 respuestas
+                btn6.setVisibility(View.GONE);
+                break;
             case 6: // 6 respuestas
                 // No es necesario ocultar ningún botón
                 break;
