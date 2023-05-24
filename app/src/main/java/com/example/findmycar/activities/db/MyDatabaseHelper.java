@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "coches.db";
+    private static final String DATABASE_NAME = "coches";
     private static final int DATABASE_VERSION = 1;
     private Context context;
 
@@ -23,7 +23,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        executeSqlFromFile(db, "coches.db");
+        executeSqlFromFile(db, "coches");
     }
 
     @Override
