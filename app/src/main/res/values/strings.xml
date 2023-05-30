@@ -31,7 +31,7 @@
         <item>¿Qué tipo de carrocería estas buscando?;Berlina;Cabrio;Coupe;Familiar;Monovolumen;SUV/4x4</item>
         <item>Escoge un tipo de combustible;Gasolina;Diesel;Híbrido;Eléctrico</item>
         <item>Eligen un rango de potencia;Menos de 90cv;90cv-130cv;130cv-200cv;200cv-300cv;300cv-450cv;Más de 450cv</item>
-        <item>¿Qué distintivo ambiental necesitas?;ECO;0;C;B</item>
+        <item>¿Qué distintivo ambiental necesitas?;ECO;0;B;C</item>
         <item>¿Cuál es el tamaño mínimo de maletero que necesitas?;Cualquiera;1 maleta (120 litros);2 maletas (240 litros);4 maletas (480 litros);Más de 5 maletas (600 litros)</item>
     </array>
 
