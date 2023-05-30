@@ -6,12 +6,20 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ListView;
+import android.widget.TextView;
+
 
 import com.example.findmycar.R;
 import com.example.findmycar.activities.db.MyDatabaseHelper;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class ResultadosActivity extends AppCompatActivity {
 
+    MyDatabaseHelper controladorDB = new MyDatabaseHelper(this);
     private String valorPrecio, tipoCarroceria, tipoCombustible, valorPotencia, tipoDistintivo, valorMaletero;
 
     //Esto da problemas, no está bien hehco
@@ -22,6 +30,7 @@ public class ResultadosActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_resultados);
+        getSupportActionBar().hide();
 
         Intent intent = getIntent();
         valorPrecio = intent.getStringExtra("precio");
@@ -30,6 +39,18 @@ public class ResultadosActivity extends AppCompatActivity {
         valorPotencia = intent.getStringExtra("potencia");
         tipoDistintivo = intent.getStringExtra("distintivo");
         valorMaletero = intent.getStringExtra("maletero");
+
+        String[] respuestas = {valorPrecio,tipoCarroceria,tipoCombustible,valorPotencia,tipoDistintivo,valorMaletero};
+        if (respuestas != null && respuestas.length > 0 && controladorDB.buscar(respuestas) != null) {
+                ListView listView = findViewById(R.id.listViewOpciones);
+                ResultadoAdapter adapter = new ResultadoAdapter(this, controladorDB.buscar(respuestas));
+                listView.setAdapter(adapter);
+        } else {
+            TextView textViewError = findViewById(R.id.textViewError);
+            textViewError.setVisibility(View.VISIBLE);
+            textViewError.setText("No se han encontrado coches con esos filtros, intente con otros filtros");
+        }
+
 
 //TODO Por ahora no funciona, revisar conexión con bbdd conociendola
         /*
