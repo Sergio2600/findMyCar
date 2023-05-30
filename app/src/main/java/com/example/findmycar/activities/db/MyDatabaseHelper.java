@@ -12,7 +12,7 @@ import java.io.InputStream;
 import java.io.InputStreamReader;
 
 public class MyDatabaseHelper extends SQLiteOpenHelper {
-    private static final String DATABASE_NAME = "coches.db";
+    private static final String DATABASE_NAME = "coches";
     private static final int DATABASE_VERSION = 1;
     private Context context;
 
@@ -23,7 +23,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
     @Override
     public void onCreate(SQLiteDatabase db) {
-        executeSqlFromFile(db, "coches.db");
+        executeSqlFromFile(db, "coches");
     }
 
     @Override
@@ -112,4 +112,116 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
 
         db.close();
     }
+
+    public void buscar(String respuestas[] ){
+
+        String sql = "SELECT * FROM COCHES WHERE ";
+        switch (respuestas[0]){
+            case "7.000€-20.000€":
+                sql = sql + " (PRECIO >= 7000 AND PRECIO <= 20000) ";
+                break;
+            case "20.000€-45.000€":
+                sql = sql + " (PRECIO > 20000 AND PRECIO <= 45000) ";
+                break;
+            case "45.000€-70.000€":
+                sql = sql + " (PRECIO > 45000 AND PRECIO <= 70000) ";
+                break;
+            case "70.000€-100.000€":
+                sql = sql + " (PRECIO > 70000 AND PRECIO <= 100000) ";
+                break;
+            case "100.000€-150.000€":
+                sql = sql + " (PRECIO > 100000 AND PRECIO <= 150000) ";
+                break;
+            case "+150.000€":
+                sql = sql + " (PRECIO > 150000) ";
+        }
+        switch (respuestas[1]){
+            case "Berlina":
+                sql = sql + " AND (TIPO_CARROCERIA = '1') ";
+                break;
+            case "Cabrio":
+                sql = sql + " AND (TIPO_CARROCERIA = '2') ";
+                break;
+            case "Coupe":
+                sql = sql + " AND (TIPO_CARROCERIA = '3') ";
+                break;
+            case "Familiar":
+                sql = sql + " AND (TIPO_CARROCERIA = '4') ";
+                break;
+            case "Monovolumen":
+                sql = sql + " AND (TIPO_CARROCERIA = '5') ";
+                break;
+            case "SUV/4x4":
+                sql = sql + " AND (TIPO_CARROCERIA = '6') ";
+                break;
+        }
+        switch(respuestas[2]){
+            case "Gasolina":
+                sql = " AND (COMBUSTIBLE = '1')";
+                break;
+            case "Diesel":
+                sql = " AND (COMBUSTIBLE = '2') ";
+                break;
+            case "Híbrido":
+                sql = " AND (COMBUSTIBLE = '3') ";
+                break;
+            case "Eléctrico":
+                sql = " AND (COMBUSTIBLE = '4') ";
+                break;
+        }
+        switch (respuestas[3]){
+            case "Menos de 90cv":
+                sql = " AND (POTENCIA AND POTENCIA < 90) ";
+                break;
+            case "90cv-130cv":
+                sql = sql + " AND (POTENCIA >= 90 AND POTENCIA <= 130) ";
+                break;
+            case "200cv-300cv":
+                sql = sql + " AND (POTENCIA > 130 AND POTENCIA <= 300) ";
+                break;
+            case "300cv-450cv":
+                sql = sql + " AND (POTENCIA > 300= 90 AND POTENCIA <= 450) ";
+                break;
+            case "Más de 450cv":
+                sql = sql + " AND (POTENCIA > 450) ";
+                break;
+        }
+        switch (respuestas[4]){
+            case "ECO":
+                sql = sql + " AND (ETIQUETA = 1) ";
+                break;
+            case "0":
+                sql = sql + " AND (ETIQUETA = 2) ";
+                break;
+            case "B":
+                sql = sql + " AND (ETIQUETA = 3) ";
+                break;
+            case "C":
+                sql = sql + " AND (ETIQUETA = 4) ";
+                break;
+        }
+        switch (respuestas[5]){
+            case "Cualquiera":
+                break;
+            case "1 maleta (120 litros)":
+                sql = sql + " AND (CAPACIDAD_MALETERO >= 120>) ";
+                break;
+            case "2 maletas (240 litros)":
+                sql = sql + " AND (CAPACIDAD_MALETERO >= 240>) ";
+                break;
+            case "4 maletas (480 litros)":
+                sql = sql + " AND (CAPACIDAD_MALETERO >= 480>) ";
+                break;
+            case "Más de 5 maletas (600 litros)":
+                sql = sql + " AND (CAPACIDAD_MALETERO >= 600>) ";
+                break;
+        }
+        sql = sql + " order by precio ";
+    }
 }
+
+
+
+
+
+
