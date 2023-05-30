@@ -33,8 +33,7 @@ public class QActivity extends AppCompatActivity {
         preguntas = getResources().getStringArray(R.array.preguntas);
         preguntaActual = 0;
 
-//Mete los strings en la activity
-        ensenarPreguntas();
+
 
 //Controles de los botones
         btn1 = (Button) findViewById(R.id.respuesta1);
@@ -44,14 +43,12 @@ public class QActivity extends AppCompatActivity {
         btn5 = (Button) findViewById(R.id.respuesta5);
         btn6 = (Button) findViewById(R.id.respuesta6);
 
+//Mete los strings en la activity
+        ensenarPreguntas();
         btn1.setOnClickListener(new View.OnClickListener(){
             @Override
             public void onClick(View v) {
-//TODO SIN COMPROBAR he hecho que el pulsar cada botón, lo primero que haga es  meter lo que has respondido en una variable-->
-//-->(Con el switch compara el valor de la pregunta actual, para saber en qué variable tiene que meter el dato respondido)-->
-//--> para luego en el intent pasar la información a la siguiente activity.
-//Me preocupa que pueda acceder a "partes[]" porque se hace en un método abajo, pero por eso lo he creado ahí arriba  con un private.....
-//HABRIA QUE CONVERTIR LOS NUMEROS A INT???
+
 
                 switch (preguntaActual) {
                     case 0:
@@ -296,26 +293,47 @@ public class QActivity extends AppCompatActivity {
 // Ocultar las preguntas no utilizadas
         int numRespuestas = partes.length - 1;
 
+
         switch (numRespuestas) {
             case 2: // 2 respuestas
-                btn3.setVisibility(View.GONE);
-                btn4.setVisibility(View.GONE);
-                btn5.setVisibility(View.GONE);
-                btn6.setVisibility(View.GONE);
+                btn1.setVisibility(View.VISIBLE);
+                btn2.setVisibility(View.VISIBLE);
+                btn3.setVisibility(View.INVISIBLE);
+                btn4.setVisibility(View.INVISIBLE);
+                btn5.setVisibility(View.INVISIBLE);
+                btn6.setVisibility(View.INVISIBLE);
                 break;
             case 3: // 3 respuestas
-                btn4.setVisibility(View.GONE);
-                btn5.setVisibility(View.GONE);
-                btn6.setVisibility(View.GONE);
+                btn1.setVisibility(View.VISIBLE);
+                btn2.setVisibility(View.VISIBLE);
+                btn3.setVisibility(View.VISIBLE);
+                btn4.setVisibility(View.INVISIBLE);
+                btn5.setVisibility(View.INVISIBLE);
+                btn6.setVisibility(View.INVISIBLE);
                 break;
             case 4: // 4 respuestas
-                btn5.setVisibility(View.GONE);
-                btn6.setVisibility(View.GONE);
+                btn1.setVisibility(View.VISIBLE);
+                btn2.setVisibility(View.VISIBLE);
+                btn3.setVisibility(View.VISIBLE);
+                btn4.setVisibility(View.VISIBLE);
+                btn5.setVisibility(View.INVISIBLE);
+                btn6.setVisibility(View.INVISIBLE);
                 break;
             case 5: // 5 respuestas
-                btn6.setVisibility(View.GONE);
+                btn1.setVisibility(View.VISIBLE);
+                btn2.setVisibility(View.VISIBLE);
+                btn3.setVisibility(View.VISIBLE);
+                btn4.setVisibility(View.VISIBLE);
+                btn5.setVisibility(View.VISIBLE);
+                btn6.setVisibility(View.INVISIBLE);
                 break;
             case 6: // 6 respuestas
+                btn1.setVisibility(View.VISIBLE);
+                btn2.setVisibility(View.VISIBLE);
+                btn3.setVisibility(View.VISIBLE);
+                btn4.setVisibility(View.VISIBLE);
+                btn5.setVisibility(View.VISIBLE);
+                btn6.setVisibility(View.VISIBLE);
                 // No es necesario ocultar ningún botón
                 break;
         }
