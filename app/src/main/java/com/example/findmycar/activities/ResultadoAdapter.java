@@ -12,6 +12,7 @@ import com.example.findmycar.R;
 
 import java.util.Locale;
 
+//clase para cargar la base de datos en la pantalla resultados
 public class ResultadoAdapter extends BaseAdapter {
     private Context context;
     private String[][] resultados;
@@ -45,24 +46,24 @@ public class ResultadoAdapter extends BaseAdapter {
         String[] resultado = resultados[position];
         String ficheroImagen;
 
+        // cargamos los datos y la imagen en pantalla a un diseño predefinido en activity_resultados
         TextView textViewMarca = convertView.findViewById(R.id.textViewMarca);
         TextView textViewModelo = convertView.findViewById(R.id.textViewModelo);
         TextView textViewPrecio = convertView.findViewById(R.id.textViewPrecio);
-        // añadimos imagenes de coches
         ImageView imageView = convertView.findViewById(R.id.imagenCoche);
 
         textViewMarca.setText(resultado[1]); // Marca
         textViewModelo.setText(resultado[2] + " " + resultado[3]); // Modelo
         textViewPrecio.setText(resultado[4] + "€"); // Precio
+
+        // generamos el nombre del fichero de imagen, tendra el formato 'marca_modelo.jpg'
         ficheroImagen = resultado[1].replace(" ","_")+"_" + resultado[2].replace(" ","_");
         ficheroImagen = ficheroImagen.replace(" ","");
         ficheroImagen = ficheroImagen.toLowerCase(Locale.ROOT);
-        //sacamos el id de la imagen
-        System.out.println(ficheroImagen);
+        //sacamos el id de la imagen a partir de su nombre de fichero
         int resourceId = context.getResources().getIdentifier(ficheroImagen,"mipmap",context.getPackageName());
-        System.out.println(resourceId);
+        // establecemos la imagen
         imageView.setImageResource(resourceId);
-
 
         return convertView;
     }
