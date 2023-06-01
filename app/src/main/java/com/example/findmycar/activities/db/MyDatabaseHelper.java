@@ -233,7 +233,7 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
             int totalFilas = cursor.getCount();
             int totalColumnas = cursor.getColumnCount();
             String[][] coches = new String[totalFilas][totalColumnas];
-            cursor.moveToFirst();//nos movemos al primer registro
+            //cursor.moveToFirst();//nos movemos al primer registro
             int fila = 0;
             while (cursor.moveToNext()) {
                 for (int columna = 0; columna < totalColumnas; columna++) {

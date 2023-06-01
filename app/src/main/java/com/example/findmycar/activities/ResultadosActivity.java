@@ -45,6 +45,9 @@ public class ResultadosActivity extends AppCompatActivity {
                 ListView listView = findViewById(R.id.listViewOpciones);
                 ResultadoAdapter adapter = new ResultadoAdapter(this, controladorDB.buscar(respuestas));
                 listView.setAdapter(adapter);
+            TextView textViewError = findViewById(R.id.textViewError);
+            textViewError.setVisibility(View.VISIBLE);
+            textViewError.setText("Estos son los vehiculos que hemos encontrado con tus filtros");
         } else {
             TextView textViewError = findViewById(R.id.textViewError);
             textViewError.setVisibility(View.VISIBLE);

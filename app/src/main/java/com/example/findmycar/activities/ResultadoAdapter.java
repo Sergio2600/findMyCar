@@ -5,9 +5,12 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.example.findmycar.R;
+
+import java.util.Locale;
 
 public class ResultadoAdapter extends BaseAdapter {
     private Context context;
@@ -40,18 +43,27 @@ public class ResultadoAdapter extends BaseAdapter {
         }
 
         String[] resultado = resultados[position];
+        String ficheroImagen;
 
-        if(resultado[1] != null && resultado[2] != null && resultado[3] != null && resultado[4] != null){
-            TextView textViewMarca = convertView.findViewById(R.id.textViewMarca);
-            TextView textViewModelo = convertView.findViewById(R.id.textViewModelo);
-            TextView textViewPrecio = convertView.findViewById(R.id.textViewPrecio);
+        TextView textViewMarca = convertView.findViewById(R.id.textViewMarca);
+        TextView textViewModelo = convertView.findViewById(R.id.textViewModelo);
+        TextView textViewPrecio = convertView.findViewById(R.id.textViewPrecio);
+        // añadimos imagenes de coches
+        ImageView imageView = convertView.findViewById(R.id.imagenCoche);
 
-            textViewMarca.setText(resultado[1]); // Marca
-            textViewModelo.setText(resultado[2] + " " + resultado[3]); // Modelo
-            textViewPrecio.setText(resultado[4] + "€"); // Precio
+        textViewMarca.setText(resultado[1]); // Marca
+        textViewModelo.setText(resultado[2] + " " + resultado[3]); // Modelo
+        textViewPrecio.setText(resultado[4] + "€"); // Precio
+        ficheroImagen = resultado[1].replace(" ","_")+"_" + resultado[2].replace(" ","_");
+        ficheroImagen = ficheroImagen.replace(" ","");
+        ficheroImagen = ficheroImagen.toLowerCase(Locale.ROOT);
+        //sacamos el id de la imagen
+        System.out.println(ficheroImagen);
+        int resourceId = context.getResources().getIdentifier(ficheroImagen,"mipmap",context.getPackageName());
+        System.out.println(resourceId);
+        imageView.setImageResource(resourceId);
 
 
-        }
         return convertView;
     }
 }
