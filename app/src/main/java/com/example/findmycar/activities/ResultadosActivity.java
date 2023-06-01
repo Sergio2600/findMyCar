@@ -22,10 +22,6 @@ public class ResultadosActivity extends AppCompatActivity {
     MyDatabaseHelper controladorDB = new MyDatabaseHelper(this);
     private String valorPrecio, tipoCarroceria, tipoCombustible, valorPotencia, tipoDistintivo, valorMaletero;
 
-    //Esto da problemas, no está bien hehco
-    //MyDatabaseHelper dbHelper = new MyDatabaseHelper(this);
-    //SQLiteDatabase db = dbHelper.getReadableDatabase();
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

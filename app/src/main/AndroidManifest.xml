@@ -15,6 +15,9 @@
             android:name=".activities.ResultadosActivity"
             android:exported="false" />
         <activity
+            android:name=".activities.FichaCoche"
+            android:exported="false" />
+        <activity
             android:name=".activities.Register"
             android:exported="false">
             <meta-data
