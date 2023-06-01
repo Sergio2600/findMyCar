@@ -28,9 +28,6 @@
             android:name=".activities.ResultadoAdapter"
             android:exported="false" />
         <activity
-            android:name=".activities.ResultadoConsulta"
-            android:exported="false" />
-        <activity
             android:name=".activities.QActivity"
             android:exported="false" />
         <activity
