@@ -12,6 +12,7 @@ import com.example.findmycar.R;
 public class FichaCoche extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        getSupportActionBar().hide();
         setContentView(R.layout.activity_ficha_coche);
         Intent intent = getIntent();
         String marca = intent.getStringExtra("marca");
