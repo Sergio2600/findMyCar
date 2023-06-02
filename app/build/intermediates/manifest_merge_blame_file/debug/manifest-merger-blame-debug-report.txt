@@ -1,0 +1,133 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.example.findmycar"
+4    android:versionCode="1"
+5    android:versionName="1.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="24"
+8-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml
+9        android:targetSdkVersion="32" />
+9-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml
+10
+11    <application
+11-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:5:5-53:19
+12        android:allowBackup="true"
+12-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:6:9-35
+13        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+13-->[androidx.core:core:1.8.0] /Users/danielalberich/.gradle/caches/transforms-3/28a1708219c3158e49b329d141e5cfff/transformed/core-1.8.0/AndroidManifest.xml:24:18-86
+14        android:dataExtractionRules="@xml/data_extraction_rules"
+14-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:7:9-65
+15        android:debuggable="true"
+16        android:extractNativeLibs="false"
+17        android:fullBackupContent="@xml/backup_rules"
+17-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:8:9-54
+18        android:icon="@mipmap/logo_app"
+18-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:9:9-40
+19        android:label="@string/app_name"
+19-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:10:9-41
+20        android:supportsRtl="true"
+20-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:11:9-35
+21        android:testOnly="true"
+22        android:theme="@style/Theme.FindMyCar" >
+22-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:12:9-47
+23        <activity
+23-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:14:9-16:40
+24            android:name="com.example.findmycar.activities.ResultadosActivity"
+24-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:15:13-58
+25            android:exported="false" />
+25-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:16:13-37
+26        <activity
+26-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:17:9-19:40
+27            android:name="com.example.findmycar.activities.FichaCoche"
+27-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:18:13-50
+28            android:exported="false" />
+28-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:19:13-37
+29        <activity
+29-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:20:9-26:20
+30            android:name="com.example.findmycar.activities.Register"
+30-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:21:13-48
+31            android:exported="false" >
+31-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:22:13-37
+32            <meta-data
+32-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:23:13-25:36
+33                android:name="android.app.lib_name"
+33-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:24:17-52
+34                android:value="" />
+34-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:25:17-33
+35        </activity>
+36        <activity
+36-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:27:9-29:40
+37            android:name="com.example.findmycar.activities.LoginActivity"
+37-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:28:13-53
+38            android:exported="false" />
+38-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:29:13-37
+39        <activity
+39-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:30:9-32:40
+40            android:name="com.example.findmycar.activities.ResultadoAdapter"
+40-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:31:13-56
+41            android:exported="false" />
+41-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:32:13-37
+42        <activity
+42-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:33:9-35:40
+43            android:name="com.example.findmycar.activities.QActivity"
+43-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:34:13-49
+44            android:exported="false" />
+44-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:35:13-37
+45        <activity
+45-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:36:9-39:41
+46            android:name="com.example.findmycar.activities.MainActivity"
+46-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:37:13-52
+47            android:exported="true"
+47-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:38:13-36
+48            android:label="findMyCar" />
+48-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:39:13-38
+49        <activity
+49-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:40:9-52:20
+50            android:name="com.example.findmycar.activities.SplashScreen"
+50-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:41:13-52
+51            android:exported="true" >
+51-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:42:13-36
+52            <intent-filter>
+52-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:43:13-47:29
+53                <action android:name="android.intent.action.MAIN" />
+53-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:44:17-69
+53-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:44:25-66
+54
+55                <category android:name="android.intent.category.LAUNCHER" />
+55-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:46:17-77
+55-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:46:27-74
+56            </intent-filter>
+57
+58            <meta-data
+58-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:23:13-25:36
+59                android:name="android.app.lib_name"
+59-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:24:17-52
+60                android:value="" />
+60-->/Users/danielalberich/Documents/GitHub/findMyCar/app/src/main/AndroidManifest.xml:25:17-33
+61        </activity>
+62
+63        <provider
+63-->[androidx.emoji2:emoji2:1.2.0] /Users/danielalberich/.gradle/caches/transforms-3/ec6e2ba61c9a42dd8e0aa44ee71f9dfb/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+64            android:name="androidx.startup.InitializationProvider"
+64-->[androidx.emoji2:emoji2:1.2.0] /Users/danielalberich/.gradle/caches/transforms-3/ec6e2ba61c9a42dd8e0aa44ee71f9dfb/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+65            android:authorities="com.example.findmycar.androidx-startup"
+65-->[androidx.emoji2:emoji2:1.2.0] /Users/danielalberich/.gradle/caches/transforms-3/ec6e2ba61c9a42dd8e0aa44ee71f9dfb/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+66            android:exported="false" >
+66-->[androidx.emoji2:emoji2:1.2.0] /Users/danielalberich/.gradle/caches/transforms-3/ec6e2ba61c9a42dd8e0aa44ee71f9dfb/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+67            <meta-data
+67-->[androidx.emoji2:emoji2:1.2.0] /Users/danielalberich/.gradle/caches/transforms-3/ec6e2ba61c9a42dd8e0aa44ee71f9dfb/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+68                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+68-->[androidx.emoji2:emoji2:1.2.0] /Users/danielalberich/.gradle/caches/transforms-3/ec6e2ba61c9a42dd8e0aa44ee71f9dfb/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+69                android:value="androidx.startup" />
+69-->[androidx.emoji2:emoji2:1.2.0] /Users/danielalberich/.gradle/caches/transforms-3/ec6e2ba61c9a42dd8e0aa44ee71f9dfb/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+70            <meta-data
+70-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/danielalberich/.gradle/caches/transforms-3/371d4428813d11175307b9e72a350208/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:31:13-33:52
+71                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+71-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/danielalberich/.gradle/caches/transforms-3/371d4428813d11175307b9e72a350208/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:32:17-78
+72                android:value="androidx.startup" />
+72-->[androidx.lifecycle:lifecycle-process:2.4.1] /Users/danielalberich/.gradle/caches/transforms-3/371d4428813d11175307b9e72a350208/transformed/lifecycle-process-2.4.1/AndroidManifest.xml:33:17-49
+73        </provider>
+74    </application>
+75
+76</manifest>

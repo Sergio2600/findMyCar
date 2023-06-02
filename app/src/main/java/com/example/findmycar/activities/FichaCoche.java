@@ -39,7 +39,21 @@ public class FichaCoche extends AppCompatActivity {
         TextView textViewCilindrada = findViewById(R.id.textoCilindrada);
         textViewCilindrada.setText(cilindrada);
         TextView textViewCombustible = findViewById(R.id.textoCombustible);
-        textViewCombustible.setText(combustible);
+
+        switch (combustible){
+            case "1":
+                textViewCombustible.setText("Gasolina");
+                break;
+            case "2":
+                textViewCombustible.setText("Diesel");
+                break;
+            case "3":
+                textViewCombustible.setText("Hibrido");
+                break;
+            case "4":
+                textViewCombustible.setText("Eléctrico");
+                break;
+        }
         TextView textViewPotencia = findViewById(R.id.textoPotencia);
         textViewPotencia.setText(potencia + " cv");
         TextView textViewTraccion = findViewById(R.id.textoTraccion);
@@ -62,9 +76,37 @@ public class FichaCoche extends AppCompatActivity {
                 break;
         }
         TextView textViewCambio = findViewById(R.id.textoTipoCambio);
-        textViewCambio.setText(cambio);
+        //textViewCambio.setText(cambio);
+        switch (cambio){
+            case "1":
+                textViewCambio.setText("Manual");
+                break;
+            case "2":
+                textViewCambio.setText("Automático");
+                break;
+        }
         TextView textViewCarroceria = findViewById(R.id.textoTipoCarroceria);
         textViewCarroceria.setText(carroceria);
+        switch (carroceria){
+            case "1":
+                textViewCarroceria.setText("Berlina");
+                break;
+            case "2":
+                textViewCarroceria.setText("Cabrio");
+                break;
+            case "3":
+                textViewCarroceria.setText("Coupé");
+                break;
+            case "4":
+                textViewCarroceria.setText("Familiar");
+                break;
+            case "5":
+                textViewCarroceria.setText("Monovolumen");
+                break;
+            case "6":
+                textViewCarroceria.setText("SUV/4X4");
+                break;
+        }
         TextView textViewMaletero = findViewById(R.id.textoCapacidadMaletero);
         textViewMaletero.setText(maletero + " l");
     }

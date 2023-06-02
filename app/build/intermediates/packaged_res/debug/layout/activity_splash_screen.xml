@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/degradado_splash_screen"
+    tools:context=".activities.SplashScreen"
+    android:animateLayoutChanges="true">
+
+    <ImageView
+        android:id="@+id/logoApp"
+        android:layout_width="238dp"
+        android:layout_height="207dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="150dp"
+        app:srcCompat="@mipmap/logo_app"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/tituloApp"
+        android:layout_width="268dp"
+        android:layout_height="75dp"
+        android:layout_below="@+id/logoApp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="60dp"
+        android:fontFamily="@font/mifuente"
+        android:text="Cargando"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="35dp"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="71dp"
+        tools:layout_editor_absoluteY="438dp" />
+
+    <ImageView
+        android:id="@+id/minivan"
+        android:layout_width="98dp"
+        android:layout_height="87dp"
+        android:layout_marginTop="470dp"
+        app:srcCompat="@mipmap/minivan"
+        tools:ignore="MissingConstraints"
+
+        />
+
+
+</RelativeLayout>

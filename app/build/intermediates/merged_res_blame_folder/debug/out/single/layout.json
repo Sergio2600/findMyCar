@@ -1,0 +1,34 @@
+[
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_login.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_login.xml"
+    },
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_qactivity.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_qactivity.xml"
+    },
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_resultados.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_resultados.xml"
+    },
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_main.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_main.xml"
+    },
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_register.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_register.xml"
+    },
+    {
+        "merged": "com.example.findmycar.app-mergeDebugResources-32:/layout/activity_register.xml",
+        "source": "com.example.findmycar.app-main-35:/layout/activity_register.xml"
+    },
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_ficha_coche.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_ficha_coche.xml"
+    },
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_splash_screen.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_splash_screen.xml"
+    }
+]
