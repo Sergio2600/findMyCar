@@ -16,12 +16,12 @@
         "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_main.xml"
     },
     {
-        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_register.xml",
-        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_register.xml"
+        "merged": "com.example.findmycar.app-mergeDebugResources-32:/layout/activity_login.xml",
+        "source": "com.example.findmycar.app-main-35:/layout/activity_login.xml"
     },
     {
-        "merged": "com.example.findmycar.app-mergeDebugResources-32:/layout/activity_register.xml",
-        "source": "com.example.findmycar.app-main-35:/layout/activity_register.xml"
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_register.xml",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_register.xml"
     },
     {
         "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-mergeDebugResources-32:/layout/activity_ficha_coche.xml",

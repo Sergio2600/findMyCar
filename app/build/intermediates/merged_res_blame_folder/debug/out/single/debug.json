@@ -940,6 +940,10 @@
         "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/mipmap-hdpi/maserati_ghibli.jpeg"
     },
     {
+        "merged": "com.example.findmycar.app-merged_res-33:/layout_activity_login.xml.flat",
+        "source": "com.example.findmycar.app-main-35:/layout/activity_login.xml"
+    },
+    {
         "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-merged_res-33:/mipmap-hdpi_volvo_xc40.jpg.flat",
         "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/mipmap-hdpi/volvo_xc40.jpg"
     },
@@ -1156,10 +1160,6 @@
         "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/mipmap-hdpi/ford_mustang.jpg"
     },
     {
-        "merged": "com.example.findmycar.app-merged_res-33:/layout_activity_register.xml.flat",
-        "source": "com.example.findmycar.app-main-35:/layout/activity_register.xml"
-    },
-    {
         "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-merged_res-33:/mipmap-hdpi_volkswagen_taigo.jpg.flat",
         "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/mipmap-hdpi/volkswagen_taigo.jpg"
     },
@@ -1184,12 +1184,12 @@
         "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/mipmap-hdpi/mg_hs.jpg"
     },
     {
-        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-merged_res-33:/mipmap-hdpi_volvo_xc60.jpg.flat",
-        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/mipmap-hdpi/volvo_xc60.jpg"
-    },
-    {
         "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-merged_res-33:/layout_activity_register.xml.flat",
         "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/layout/activity_register.xml"
+    },
+    {
+        "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-merged_res-33:/mipmap-hdpi_volvo_xc60.jpg.flat",
+        "source": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-main-35:/mipmap-hdpi/volvo_xc60.jpg"
     },
     {
         "merged": "/Users/danielalberich/.gradle/daemon/7.4/com.example.findmycar.app-merged_res-33:/mipmap-hdpi_tesla_model_3.jpg.flat",
