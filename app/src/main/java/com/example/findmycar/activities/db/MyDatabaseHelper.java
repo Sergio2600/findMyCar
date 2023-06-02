@@ -114,108 +114,116 @@ public class MyDatabaseHelper extends SQLiteOpenHelper {
     public String[][] buscar(String respuestas[]) {
         //abrimos la basa de datos para lectura y escritura
         SQLiteDatabase db = this.getWritableDatabase();
-        String sql = "SELECT * FROM COCHES WHERE ";
+        String sql = "SELECT c.marca, c.modelo, c.version, c.precio, c.cilindrada, co.combustible, c.potencia, t.traccion, ";
+        sql = sql + " c.'consumo mixto', c.etiqueta, tc.tipo_cambio, tca.tipo_carroceria, c.capacidad_maletero, e.enlace ";
+        sql = sql + " FROM COCHES c ";
+        sql = sql + " left join combustible co on co.id = c.combustible ";
+        sql = sql + " left join traccion t on t.id = c.traccion ";
+        sql = sql + " left join tipo_cambio tc on tc.id = c.tipo_cambio ";
+        sql = sql + " left join tipo_carroceria tca on tca.id = c.tipo_carroceria ";
+        sql = sql + " left join enlaces_coches e on e.marca = c.marca and e.modelo = c.modelo ";
+        sql = sql + " WHERE ";
         switch (respuestas[0]) {
             case "7.000€-20.000€":
-                sql = sql + " (PRECIO >= '7000' AND PRECIO <= '20000') ";
+                sql = sql + " (c.PRECIO >= '7000' AND c.PRECIO <= '20000') ";
                 break;
             case "20.000€-45.000€":
-                sql = sql + " (PRECIO > '20000' AND PRECIO <= '45000') ";
+                sql = sql + " (c.PRECIO > '20000' AND c.PRECIO <= '45000') ";
                 break;
             case "45.000€-70.000€":
-                sql = sql + " (PRECIO > '45000' AND PRECIO <= '70000') ";
+                sql = sql + " (c.PRECIO > '45000' AND c.PRECIO <= '70000') ";
                 break;
             case "70.000€-100.000€":
-                sql = sql + " (PRECIO > '70000' AND PRECIO <= '100000') ";
+                sql = sql + " (c.PRECIO > '70000' AND c.PRECIO <= '100000') ";
                 break;
             case "100.000€-150.000€":
-                sql = sql + " (PRECIO > '100000' AND PRECIO <= '150000') ";
+                sql = sql + " (c.PRECIO > '100000' AND c.PRECIO <= '150000') ";
                 break;
             case "+150.000€":
-                sql = sql + " (PRECIO > '150000') ";
+                sql = sql + " (c.PRECIO > '150000') ";
         }
         switch (respuestas[1]) {
             case "Berlina":
-                sql = sql + " AND (TIPO_CARROCERIA = '1') ";
+                sql = sql + " AND (c.TIPO_CARROCERIA = '1') ";
                 break;
             case "Cabrio":
-                sql = sql + " AND (TIPO_CARROCERIA = '2') ";
+                sql = sql + " AND (c.TIPO_CARROCERIA = '2') ";
                 break;
             case "Coupe":
-                sql = sql + " AND (TIPO_CARROCERIA = '3') ";
+                sql = sql + " AND (c.TIPO_CARROCERIA = '3') ";
                 break;
             case "Familiar":
-                sql = sql + " AND (TIPO_CARROCERIA = '4') ";
+                sql = sql + " AND (c.TIPO_CARROCERIA = '4') ";
                 break;
             case "Monovolumen":
-                sql = sql + " AND (TIPO_CARROCERIA = '5') ";
+                sql = sql + " AND (c.TIPO_CARROCERIA = '5') ";
                 break;
             case "SUV/4x4":
-                sql = sql + " AND (TIPO_CARROCERIA = '6') ";
+                sql = sql + " AND (c.TIPO_CARROCERIA = '6') ";
                 break;
         }
         switch (respuestas[2]) {
             case "Gasolina":
-                sql = sql + " AND (COMBUSTIBLE = '1') ";
+                sql = sql + " AND (c.COMBUSTIBLE = '1') ";
                 break;
             case "Diesel":
-                sql = sql + " AND (COMBUSTIBLE = '2') ";
+                sql = sql + " AND (c.COMBUSTIBLE = '2') ";
                 break;
             case "Híbrido":
-                sql = sql + " AND (COMBUSTIBLE = '3') ";
+                sql = sql + " AND (c.COMBUSTIBLE = '3') ";
                 break;
             case "Eléctrico":
-                sql = sql + " AND (COMBUSTIBLE = '4') ";
+                sql = sql + " AND (c.COMBUSTIBLE = '4') ";
                 break;
         }
         switch (respuestas[3]) {
             case "Menos de 90cv":
-                sql = sql + " AND (POTENCIA AND POTENCIA < '90') ";
+                sql = sql + " AND (c.POTENCIA AND POTENCIA < '90') ";
                 break;
             case "90cv-130cv":
-                sql = sql + " AND (POTENCIA >= '90' AND POTENCIA <= '130') ";
+                sql = sql + " AND (c.POTENCIA >= '90' AND c.POTENCIA <= '130') ";
                 break;
             case "130cv-200cv":
-                sql = sql + " AND (POTENCIA > '130' AND POTENCIA <= '200') ";
+                sql = sql + " AND (c.POTENCIA > '130' AND c.POTENCIA <= '200') ";
                 break;
             case "200cv-300cv":
-                sql = sql + " AND (POTENCIA > '200' AND POTENCIA <= '300') ";
+                sql = sql + " AND (c.POTENCIA > '200' AND c.POTENCIA <= '300') ";
                 break;
             case "300cv-450cv":
-                sql = sql + " AND (POTENCIA > '300' AND POTENCIA <= '450') ";
+                sql = sql + " AND (c.POTENCIA > '300' AND c.POTENCIA <= '450') ";
                 break;
             case "Más de 450cv":
-                sql = sql + " AND (POTENCIA > '450') ";
+                sql = sql + " AND (c.POTENCIA > '450') ";
                 break;
         }
         switch (respuestas[4]) {
             case "ECO":
-                sql = sql + " AND (ETIQUETA = '1') ";
+                sql = sql + " AND (c.ETIQUETA = '1') ";
                 break;
             case "0":
-                sql = sql + " AND (ETIQUETA = '2') ";
+                sql = sql + " AND (c.ETIQUETA = '2') ";
                 break;
             case "B":
-                sql = sql + " AND (ETIQUETA = '3') ";
+                sql = sql + " AND (c.ETIQUETA = '3') ";
                 break;
             case "C":
-                sql = sql + " AND (ETIQUETA = '4') ";
+                sql = sql + " AND (c.ETIQUETA = '4') ";
                 break;
         }
         switch (respuestas[5]) {
             case "Cualquiera":
                 break;
             case "1 maleta (120 litros)":
-                sql = sql + " AND (CAPACIDAD_MALETERO >= '120') ";
+                sql = sql + " AND (c.CAPACIDAD_MALETERO >= '120') ";
                 break;
             case "2 maletas (240 litros)":
-                sql = sql + " AND (CAPACIDAD_MALETERO >= '240') ";
+                sql = sql + " AND (c.CAPACIDAD_MALETERO >= '240') ";
                 break;
             case "4 maletas (480 litros)":
-                sql = sql + " AND (CAPACIDAD_MALETERO >= '480') ";
+                sql = sql + " AND (c.CAPACIDAD_MALETERO >= '480') ";
                 break;
             case "Más de 5 maletas (600 litros)":
-                sql = sql + " AND (CAPACIDAD_MALETERO >= '600') ";
+                sql = sql + " AND (c.CAPACIDAD_MALETERO >= '600') ";
                 break;
         }
         sql = sql + " order by precio ";
