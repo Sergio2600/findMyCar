@@ -5,6 +5,7 @@
     android:orientation="vertical"
     android:padding="16px"
     android:paddingTop="10px"
+    android:background="@color/black"
     >
     <TextView
         android:id="@+id/textViewError"
@@ -13,6 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="150px"
         android:textSize="18sp"
+        android:textColor="@color/white"
         android:fontFamily="@font/mifuente"
         android:textStyle="bold"
         />
@@ -21,18 +23,22 @@
         android:id="@+id/textViewMarca"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:textSize="18sp"
         android:textStyle="bold"
         />
 
     <TextView
         android:id="@+id/textViewModelo"
+        android:textColor="@color/white"
+        android:layout_marginLeft="3px"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="14sp" />
 
     <TextView
         android:id="@+id/textViewPrecio"
+        android:textColor="@color/green_blue"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="16sp"
@@ -50,7 +56,7 @@
         android:id="@+id/listViewOpciones"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/gray"
+        android:background="@color/green_blue"
         />
 
 </LinearLayout>
